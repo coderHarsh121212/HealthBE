@@ -10,12 +10,12 @@ connectDB();
 
 const app = express();
 
-// Middleware
+// Middlewares
 app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
 app.use("/api/health-records", healthRecordRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
